@@ -77,12 +77,13 @@ type AssemblyInfo struct {
 	Error   string `json:"error"`
 	Message string `json:"message"`
 
-	AssemblyID             string                 `json:"assembly_id"`
-	ParentID               string                 `json:"parent_id"`
-	AssemblyURL            string                 `json:"assembly_url"`
-	AssemblySSLURL         string                 `json:"assembly_ssl_url"`
-	BytesReceived          int                    `json:"bytes_received"`
-	BytesExpected          int                    `json:"bytes_expected"`
+	AssemblyID     string `json:"assembly_id"`
+	ParentID       string `json:"parent_id"`
+	AssemblyURL    string `json:"assembly_url"`
+	AssemblySSLURL string `json:"assembly_ssl_url"`
+	BytesReceived  int    `json:"bytes_received"`
+	// Remove this to work around a bug in the Transloadit API
+	// BytesExpected          int                    `json:"bytes_expected"`
 	StartDate              string                 `json:"start_date"`
 	IsInfinite             bool                   `json:"is_infinite"`
 	HasDupeJobs            bool                   `json:"has_dupe_jobs"`
